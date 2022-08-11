@@ -6,6 +6,9 @@ app.get('/', (req, res) => {
 });
 const absolutePath2 = __dirname + '/public';
 app.use('/public', express.static(absolutePath2));
+app.get('/json', (req, res) => {
+  res.json({ "message": "Hello json" });
+})
 
 
 
